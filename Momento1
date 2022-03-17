@@ -1,0 +1,82 @@
+package co.edu.cesde;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        Scanner inputData = new Scanner(System.in);
+
+        int namberp,hamburg, perros, salchipapas, chorizos,platon;;
+        double value, valuet, tip, total,des1,des2;
+        hamburg = 0;
+        perros = 0;
+        salchipapas = 0;
+        chorizos = 0;
+        valuet = 0;
+        System.out.println("Enter number of people");
+        namberp = inputData.nextInt();
+        System.out.println("what dish do you want to eat");
+        platon = inputData.nextInt();
+        System.out.println("Enter value platon");
+        value = inputData.nextDouble();
+
+        while ( namberp > 0 ){
+            System.out.println("menu");
+            System.out.println("1. hamburguesa = 10000");
+            System.out.println("2. perros = 8000");
+            System.out.println("3. salchipapas= 6000");
+            System.out.println("4. chorizos = 7000");
+
+            switch (platon){
+                case 1 : hamburg = hamburg+1;
+                break;
+                case 2 : perros = perros +1;
+                    break;
+                case 3 : salchipapas = salchipapas+1;
+                    break;
+                case 4 : chorizos = chorizos +1;
+                    break;
+            }
+        }
+        des1 = 0.90;
+        des2 = 0.95;
+        if (value >= 20000){
+            valuet = value - des1;
+            System.out.println("A discount was made for purchases over $20,000 of:");
+        }
+        System.out.println("do you want to include the tip 1. si 2. no?");
+        tip = inputData.nextDouble();
+
+        if (tip == 1){
+            total = value + des1;
+            if (tip == 2){
+                System.out.println("value full"+valuet);
+            }
+        }
+        if (hamburg >1 || perros > 1 || salchipapas>1 || chorizos>1 ){
+            valuet =  value - des2;
+                    
+        }
+    }
+}
+
+
+Use un archivo .txt y agréguelo también al mismo repositorio donde va a realizar el código
+Java (Valor 1.0)
+1. Que diferencia hay entre un igual ( = ) y un doble ( == )
+= hacer una operacion
+== comparacion 
+2. Cuales son los tipos de datos básico de java
+byte.
+short.
+int.
+long.
+float.
+double.
+boolean.
+char.
+3. Quién es la empresa que actualmente se encarga de mantener el desarrollo de
+java
+Oracle
+4. En qué otros campos se puede utilizar java para crear software
+ Incluso Google Maps en ocasiones, utiliza applet de Java que se ejecuta dentro del propio navegar del usuario reduciendo la carga del servidor.
